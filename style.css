@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #faf8ff;
+  color: #292344;
+  line-height: 1.7;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 15px #30205b12;
+}
+
+.logo {
+  color: #7544db;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #39304d;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #9255ec;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #eee6ff, #ffe7f2, #e1f8ff);
+}
+
+.tagline {
+  color: #7544db;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #9255ec;
+}
+
+.hero p:not(.tagline) {
+  max-width: 600px;
+  margin: 0 auto 25px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #7544db;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #5128ad;
+  transform: translateY(-2px);
+}
+
+.about,
+.offers,
+.details,
+.contact {
+  padding: 75px 8%;
+  text-align: center;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 15px auto 0;
+  color: #696178;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.section-intro {
+  margin-bottom: 30px;
+  color: #746b87;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.card {
+  display: block;
+  padding: 32px 22px;
+  border-radius: 22px;
+  text-decoration: none;
+  color: #302747;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 25px #30205b12;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px #30205b25;
+  border-color: #a88ae9;
+  outline: none;
+}
+
+.creative {
+  background: linear-gradient(145deg, #f1e7ff, #ffffff);
+}
+
+.modern {
+  background: linear-gradient(145deg, #ffe7f1, #ffffff);
+}
+
+.development {
+  background: linear-gradient(145deg, #ddf7ff, #ffffff);
+}
+
+.emoji,
+.detail-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: #7544db;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.card p {
+  color: #665d76;
+}
+
+.read-more {
+  display: inline-block;
+  color: #7544db;
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+.details {
+  scroll-margin-top: 80px;
+  min-height: 380px;
+}
+
+.details p {
+  max-width: 650px;
+  margin: 15px auto;
+}
+
+.details ul {
+  display: inline-block;
+  text-align: left;
+  list-style: none;
+  margin: 15px 0;
+}
+
+.details li {
+  padding: 7px 0;
+}
+
+.creative-detail {
+  background: #f0e8ff;
+}
+
+.modern-detail {
+  background: #ffeaf3;
+}
+
+.development-detail {
+  background: #e3f8ff;
+}
+
+.contact {
+  background: #30234b;
+  color: white;
+}
+
+.contact p {
+  margin-top: 10px;
+}
+
+footer {
+  background: #211832;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 14px;
+    font-size: 14px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 75px 20px;
+  }
+
+  .about,
+  .offers,
+  .details,
+  .contact {
+    padding: 55px 6%;
+  }
+}
